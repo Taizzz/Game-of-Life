@@ -6,20 +6,6 @@ import robbie.gameoflife.main.GameOfLife;
 
 public class CellManager {
 
-	public static ArrayList<Cell> getAliveCells() {
-		ArrayList<Cell> aliveCells = new ArrayList<Cell>();
-		
-		for (Cell[] cells : GameOfLife.CELLS) {
-			for (Cell cell : cells) {
-				if (cell.isAlive()) {
-					aliveCells.add(cell);
-				}
-			}
-		}
-		
-		return aliveCells;
-	}
-	
 	public static ArrayList<Cell> getNeighbourCells(Cell cell) {
 		ArrayList<Cell> neighbourCells = new ArrayList<Cell>();
 		int cellX = cell.getX();
