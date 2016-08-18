@@ -20,7 +20,7 @@ public class GameCanvas extends Canvas {
 
 	public void paint(Graphics g) {
 		Graphics graphics = this.getGraphics();
-		graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
+		graphics.clearRect(0, 0, GameOfLife.WIDTH, GameOfLife.HEIGHT);
 		Random random = new Random();
 		graphics.setColor(new Color(random.nextFloat(), random.nextFloat(), random.nextFloat()));
 

@@ -38,6 +38,11 @@ public class GameOfLife {
 		CELLS[10][10].setAlive(true);
 		CELLS[10][11].setAlive(true);
 		CELLS[10][12].setAlive(true);
+		CELLS[11][10].setAlive(true);
+		CELLS[12][10].setAlive(true);
+		CELLS[12][11].setAlive(true);
+		CELLS[12][12].setAlive(true);
+		CELLS[11][12].setAlive(true);
 		
 		startGameLoop(canvas);
 	}
@@ -59,11 +64,11 @@ public class GameOfLife {
 	
 				@Override
 				public void run() {
-					canvas.repaint();
 					CellManager.updateCells();
+					canvas.repaint();
 				}
 				
-			}, 0, 2000);
+			}, 1000, 1000);
 		}
 	}
 
